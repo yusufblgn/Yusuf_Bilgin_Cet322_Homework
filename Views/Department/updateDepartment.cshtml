@@ -1,0 +1,36 @@
+﻿@model WebAppCoreMVCCodeFirst._24._03._2023_22.Models.Student
+
+@{
+    ViewData["Title"] = "Update Student";
+}
+
+<h2>Öğrenci Güncelle</h2>
+<hr />
+
+<form class="form-group" method="post" action="/Students/updateSaveStudent">
+
+    <input type="hidden" name="StudentdsID" value="@Model.StudentdsID" />
+
+    <div class="mb-3">
+        <label class="form-label"><b>Öğrenci No</b></label>
+        <input type="text" class="form-control" name="StudentdsNo" value="@Model.StudentdsNo" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><b>Adı</b></label>
+        <input type="text" class="form-control" name="StudentdsName" value="@Model.StudentdsName" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><b>Soyadı</b></label>
+        <input type="text" class="form-control" name="StudentdsSurname" value="@Model.StudentdsSurname" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><b>E-Mail</b></label>
+        <input type="email" class="form-control" name="EMail" value="@Model.EMail" required />
+    </div>
+
+    <button type="submit" class="btn btn-info text-white">GÜNCELLE</button>
+    <a href="/Students/Index" class="btn btn-secondary text-white">İPTAL</a>
+</form>

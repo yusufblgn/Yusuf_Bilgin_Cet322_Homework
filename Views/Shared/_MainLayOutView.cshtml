@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<title>ASP.NET MVC CORE </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="~/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/twitter-bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
+<link href="~/twitter-bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="width:25%">
+        <br />
+        <br />
+        <a href="/Department/Index" class="w3-bar-item w3-button">Departments</a>
+        <a href="/Student/Index" class="w3-bar-item w3-button">Students</a>
+        <a href="#" class="w3-bar-item w3-button">About US</a>
+        <a href="#" class="w3-bar-item w3-button">Exit</a>
+    </div>
+
+    <div style="margin-left:25%">
+
+        <div class="w3-container w3-green">
+            <h1>CET BOUN EDU ASP.NET CORE MVC PROJECT</h1>
+          
+        </div>
+
+        <div class="w3-container">         
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>

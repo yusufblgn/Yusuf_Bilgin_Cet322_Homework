@@ -1,0 +1,34 @@
+﻿@using WebAppCoreMVCCodeFirst._24._03._2023_22.Models
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayOutView.cshtml";
+}
+@model List<Department>
+<link href="c:\users\s_esr\source\repos\webappcoremvccodefirst.24.03.2023_22\webappcoremvccodefirst.24.03.2023_22\wwwroot\twitter-bootstrap\css\bootstrap.css" rel="stylesheet" />
+<h1>Departments</h1>
+
+<table class="table table-bordered table-striped">
+    |<tr>
+        <th>Department ID</th>
+        <th>Department Name</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+    @foreach(var x in Model){
+    <tr>    
+        <td>
+            @x.DeptID
+
+
+        </td>
+        <td>@x.DeptName</td>
+        <td><a href="/Department/removeDepartment/@x.DeptID" class="btn btn-danger">DELETE</a></td>
+        <td><a href="/Department/updateDepartment/@x.DeptID" class="btn btn-info  ">UPDATE</a></td>
+        <td><a href="#" class="btn btn-primary">DETAILS</a></td>
+    </tr>
+    }
+</table>
+<a href="/Department/newDepartment" class="btn btn-primary">NEW DEPARTMENT</a>
+
+

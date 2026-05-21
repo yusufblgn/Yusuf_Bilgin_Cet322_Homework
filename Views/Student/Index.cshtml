@@ -1,0 +1,45 @@
+﻿@model List<WebAppCoreMVCCodeFirst._24._03._2023_22.Models.Student>
+
+@{
+    ViewData["Title"] = "Students";
+    Layout = "~/Views/Shared/_MainLayoutView.cshtml";
+}
+
+<h2>Students</h2>
+<hr />
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr class="bg-light">
+            <th>ID</th>
+            <th>Öğrenci No</th>
+            <th>Adı</th>
+            <th>Soyadı</th>
+            <th>E-Mail</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.StudentdsID</td>
+                <td>@x.StudentdsNo</td>
+                <td>@x.StudentdsName</td>
+                <td>@x.StudentdsSurname</td>
+                <td>@x.EMail</td>
+
+                <td>
+                    <a href="/Student/removeStudent/@x.StudentdsID" class="btn btn-danger text-white" onclick="return confirm('Bu öğrenciyi silmek istediğinize emin misiniz?');">DELETE</a>
+                </td>
+
+                <td>
+                    <a href="/Student/updateStudent/@x.StudentdsID" class="btn btn-info text-white">UPDATE</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Student/newStudent" class="btn btn-primary text-white">NEW STUDENT</a>

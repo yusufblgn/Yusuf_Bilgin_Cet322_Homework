@@ -1,0 +1,26 @@
+﻿@model WebAppCoreMVCCodeFirst._24._03._2023_22.Models.Department;
+@{
+    ViewData["Title"] = "newDepartment";
+    Layout = "~/Views/Shared/_MainLayOutView.cshtml";
+}
+
+<link href="c:\users\s_esr\source\repos\webappcoremvccodefirst.24.03.2023_22\webappcoremvccodefirst.24.03.2023_22\wwwroot\twitter-bootstrap\css\bootstrap.css" rel="stylesheet" />
+<link href="c:\users\s_esr\source\repos\webappcoremvccodefirst.24.03.2023_22\webappcoremvccodefirst.24.03.2023_22\wwwroot\twitter-bootstrap\css\bootstrap.min.css" rel="stylesheet" />
+<link href="c:\users\s_esr\source\repos\webappcoremvccodefirst.24.03.2023_22\webappcoremvccodefirst.24.03.2023_22\wwwroot\twitter-bootstrap\css\bootstrap.rtl.css" rel="stylesheet" />
+<link href="c:\users\s_esr\source\repos\webappcoremvccodefirst.24.03.2023_22\webappcoremvccodefirst.24.03.2023_22\wwwroot\twitter-bootstrap\css\bootstrap.rtl.min.css" rel="stylesheet" />
+<br />
+<br />
+<br />
+<br />
+
+<form class="form-control-lg" method="post">
+    <b>DEPARTMENT NAME</b>
+    <br />
+    <br />
+    @Html.TextBoxFor(x=>x.DeptName,new {@class="form-control"})
+    <br />
+
+    <button class="btn btn-info">ADD DEPARTMENT</button>
+</form>
+
+

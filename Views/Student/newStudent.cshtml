@@ -1,0 +1,40 @@
+﻿@model WebAppCoreMVCCodeFirst._24._03._2023_22.Models.Student
+
+@{
+    ViewData["Title"] = "New Student";
+    Layout = "~/Views/Shared/_MainLayoutView.cshtml";
+}
+
+<h2>Yeni Öğrenci Ekle</h2>
+<hr />
+
+<form class="form-group" method="post" action="/Student/newStudent">
+
+    <div class="mb-3">
+        <label class="form-label"><b>Öğrenci No</b></label>
+        <input type="text" class="form-control" name="StudentdsNo" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><b>Adı</b></label>
+        <input type="text" class="form-control" name="StudentdsName" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><b>Soyadı</b></label>
+        <input type="text" class="form-control" name="StudentdsSurname" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><b>E-Mail</b></label>
+        <input type="email" class="form-control" name="EMail" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><b>Departman ID</b></label>
+        <input type="number" class="form-control" name="DeptID" required />
+    </div>
+
+    <button type="submit" class="btn btn-success text-white">KAYDET</button>
+    <a href="/Student/Index" class="btn btn-secondary text-white">İPTAL</a>
+</form>
